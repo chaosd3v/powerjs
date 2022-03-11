@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,22 @@
     <title>Power.js - Web application that shows battery levels</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 </head>
+
 <body>
     <div class="__card">
         <h2 class="__card_heading">Power.<span>Js</span></h2>
-        <p class="__title">Battery Percentage: <span id="batteryPercent"> Not available</span></p>
-        <p class="__title">Battery Status: <span id="batteryStatus"> Not available</span></p>
+        <div id="deviceContent">
+            <p class="__title">Battery Percentage: <span id="batteryPercent"> Not available</span></p>
+            <p class="__title">Battery Status: <span id="batteryStatus"> Not available</span></p>
+            <p class="__title">Browser: <span id="browser"> Not available</span></p>
+            <p class="__title">Platform: <span id="platform"> Not available</span></p>
+        </div>
+        <div id="notSupported" class="hide">
+            <p class="__title">Not supported due to navigator object used</p>
+        </div>
     </div>
+
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

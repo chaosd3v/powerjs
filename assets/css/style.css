@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #3f3f3f;
     --secondary-color: #f7f9f7;
@@ -44,4 +51,8 @@ body {
 
 .__card span {
     font-weight: 400;
+}
+
+.hide {
+    display: none;
 }
