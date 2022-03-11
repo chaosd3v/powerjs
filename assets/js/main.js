@@ -8,8 +8,10 @@ const deviceContent = document.getElementById("deviceContent");
 showDeviceInfo();
 
 async function showDeviceInfo() {
-    //Get battery info 
-    const isSupported = navigator && 'getBattery' in navigator
+    
+    const isSupported = navigator && 'getBattery' in navigator;
+
+    //Show battery & other device info if navigator is supported
     if (isSupported) {
         navigator.getBattery()
             .then(function (battery) {
