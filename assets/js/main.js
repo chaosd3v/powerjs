@@ -37,7 +37,6 @@ async function showDeviceInfo() {
 }
 
 function updateBatteryInfo(battery) {
-    const level = battery.level * 100;
-    batteryPercent.textContent = level + " %";
+    batteryPercent.textContent =  `${Math.round(battery.level * 100)} %`;
     batteryStatus.textContent = (battery.charging) ? "Charging" : "On Battery";
 }
