@@ -11,7 +11,7 @@ async function showDeviceInfo() {
     
     const isSupported = navigator && 'getBattery' in navigator;
 
-    //Show battery & other device info if navigator is supported
+    //Show battery & other device info if battery api in navigator is supported
     if (isSupported) {
         navigator.getBattery()
             .then(function (battery) {
@@ -30,6 +30,7 @@ async function showDeviceInfo() {
         browser.textContent = navigator.userAgentData.brands[2].brand
         platform.textContent = navigator.userAgentData.platform
     }else {
+        console.log("Battery Api not supported");
         deviceContent.classList.add("hide");
         notSupported.classList.remove("hide");
     }
